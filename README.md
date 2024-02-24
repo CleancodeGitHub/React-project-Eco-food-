@@ -1,3 +1,5 @@
+You need the following elements to create the “Eco Food” application: a React project architecture with Clean Code practices, a Next.js application structure, basic CSS properties for Tailwind CSS flexibility, Framer Motion animations and gradients, media queries for responsiveness across devices, and a fast server with a custom domain name. These components are crucial for a successful and well-rounded application development process.
+#====================================================================
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
