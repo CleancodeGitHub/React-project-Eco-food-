@@ -1,0 +1,70 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { socials } from '../constants';
+import styles from '../styles';
+import { footerVariants } from '../utils/motion';
+
+const Footer = () => (
+  <motion.footer
+    // Animation variants for footer
+    variants={footerVariants}
+    initial="hidden"
+    whileInView="show"
+    className={`${styles.xPaddings} py-8 relative`}
+  >
+    {/* Gradient overlay */}
+    <div className="footer-gradient" />
+
+    {/* Inner content */}
+    <div className={`${styles.innerWidth} mx-auto flex flex-col gap-8`}>
+      {/* Start with local food section */}
+      <div className="flex items-center justify-between flex-wrap gap-5">
+        <h4 className="font-bold md:text-[64px] text-[44px] text-white">
+          Start with local food
+        </h4>
+        <button type="button" className="flex items-center h-fit py-4 px-6 bg-[#25618B] rounded-[32px] gap-[12px]">
+          {/* Icon */}
+          <img
+            src="/D03.png"
+            alt="headset"
+            className="w-[24px] h-[24px] object-contain"
+          />
+          {/* Text */}
+          <span className="font-normal text-[16px] text-white">
+            Enter Organic food
+          </span>
+        </button>
+      </div>
+
+      {/* Divider */}
+      <div className="mb-[50px] h-[2px] bg-white opacity-10" />
+
+      {/* Footer information and social icons */}
+      <div className="flex items-center justify-between flex-wrap gap-4">
+        {/* ECO FOOD heading */}
+        <h4 className="font-extrabold text-[24px] text-white">
+          ECO FOOD
+        </h4>
+        {/* Copyright text */}
+        <p className="font-normal text-[14px] text-white opacity-50">
+          Copyright © ECO FOOD 2024  All rights reserved.
+        </p>
+        {/* Social icons */}
+        <div className="flex gap-4">
+          {socials.map((social) => (
+            <img
+              key={social.name}
+              src={social.url}
+              alt={social.name}
+              className="w-[24px] h-[24px] object-contain cursor-pointer"
+            />
+          ))}
+        </div>
+      </div>
+    </div>
+  </motion.footer>
+);
+
+export default Footer;
+
